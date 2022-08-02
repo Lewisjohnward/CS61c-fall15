@@ -1,0 +1,20 @@
+Exercise 4: Binary Alphabet
+
+What five decimal digits produce the pattern above: 6 9 15 9 9 
+What letter is drawn with 
+    1, 1, 9, 9, 6: J
+    0xF8F88: 15, 8, 15, 8, 8 : F
+
+Exercise 5: $1,000 $1 Bills
+    Each letter contains the following number of bills . 
+    490
+    256
+    128
+    64
+    32
+    16
+    8
+    4
+    2
+    1
+
