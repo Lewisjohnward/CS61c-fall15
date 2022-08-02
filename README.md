@@ -4,27 +4,27 @@
 Solutions to various problems from [CS61C](http://inst.eecs.berkeley.edu/~cs61c/sp15/). Lecture videos are available on [the Internet Archive](https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_).
 
 - [x] Section -1: Number Representation
-- [ ] Lab 0: Intro, Git, Number Rep
+- [x] Lab 0: Intro, Git, Number Rep
 
-- [X]Section 1: C Basics
-- [ ]Lab 1: C and GDB
+- [x] Section 1: C Basics
+- [ ] Lab 1: C and GDB
 
-- [ ]HW 0: Intro and Number Representation
+- [ ] HW 0: Intro and Number Representation
 
-- [ ]Section 2: C Memory Management and MIPS Intro
-- [ ]Lab 2: Advanced C, Memory Management
+- [ ] Section 2: C Memory Management and MIPS Intro
+- [ ] Lab 2: Advanced C, Memory Management
 
-- [ ]HW 1: C (Build git Part I)
+- [ ] HW 1: C (Build git Part I)
 
-- [ ]Section 3: MIPS II / Instruction Formats
-- [ ]Lab 3: MIPS Assembly
+- [ ] Section 3: MIPS II / Instruction Formats
+- [ ] Lab 3: MIPS Assembly
 
-- [ ]HW 2: Advanced C (Build git Part II)
+- [ ] HW 2: Advanced C (Build git Part II)
 
-- [ ]Section 4: MIPS Procedures / CALL
-- [ ]Lab 4: MIPS Functions, Pointers
+- [ ] Section 4: MIPS Procedures / CALL
+- [ ] Lab 4: MIPS Functions, Pointers
 
-- [ ]Project 1, Part 1: C and MIPS
+- [ ] Project 1, Part 1: C and MIPS
 
-- [ ]HW 3: C to MIPS Practice Problems
+- [ ] HW 3: C to MIPS Practice Problems
 
