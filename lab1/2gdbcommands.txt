@@ -1,0 +1,54 @@
+To execute one line of code
+s(tep)
+
+To execute the entire function with one keypress
+n(next)
+
+To run the process
+run
+
+How do you set a break point
+
+break main
+b 28 [line number]
+
+Get breakpoints
+info b
+
+Print variable
+print [var]
+
+
+1. How do you pass command line arguments to a program when using gdb?
+
+(gdb) r arg1 arg2
+(gdb) set args program
+(gdb) show args
+
+2. How do you set a breakpoint which only occurs when a set of conditions is true?
+
+break 29
+condition [num] i==4
+
+or
+
+b 29 if (y==999)
+
+watch i if i==4
+b(reak) calc if $rdi == num
+
+3. How do you execute the next line of C code in the program after stopping at a breakpoint?
+n - next line
+
+4. How do you tell GDB that you want to debug the code inside the function 
+s - step
+
+5.How do you resume the program after stopping at a breakpoint?
+c - continue. Program will run until program ends, crashes or gdb encounters a breakpoint
+
+6. How can you see the value of a variable?
+print [variable]
+
+7.How do you configure gdb so it prints the value of a bariable after every step?
+
+
