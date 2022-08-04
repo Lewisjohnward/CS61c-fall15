@@ -1,3 +1,6 @@
+Go to next breakpoint
+c
+
 To execute one line of code
 s(tep)
 
@@ -49,6 +52,22 @@ c - continue. Program will run until program ends, crashes or gdb encounters a b
 6. How can you see the value of a variable?
 print [variable]
 
-7.How do you configure gdb so it prints the value of a bariable after every step?
+7.How do you configure gdb so it prints the value of a variable after every step?
+
+display [var] - will print variable after each step
+info display
+delete display [num]
+
+watch [varname] Will break whenever a variable is written to
+
+print &[varname] will give the address of global variable
+watch (int)0xDEA will watch the address the variable is in
+
+8. How do you print a list of all variables and their values in the current function?
+info locals
+backtrace bt full
+
+9. How do you exit gdb?
+q or ctrl-d
 
 
