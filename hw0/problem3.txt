@@ -1,0 +1,4 @@
+a. 2 ^ n
+b. The number of negative ints is (2 ^ n)/2 
+c. 1
+d. The difference between the 2 numbers is (2 ^ n) -1
