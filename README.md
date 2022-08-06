@@ -7,9 +7,9 @@ Solutions to various problems from [CS61C](http://inst.eecs.berkeley.edu/~cs61c/
 - [x] Lab 0: Intro, Git, Number Rep
 
 - [x] Section 1: C Basics
-- [ ] Lab 1: C and GDB
+- [x] Lab 1: C and GDB
 
-- [ ] HW 0: Intro and Number Representation
+- [x] HW 0: Intro and Number Representation
 
 - [ ] Section 2: C Memory Management and MIPS Intro
 - [ ] Lab 2: Advanced C, Memory Management
