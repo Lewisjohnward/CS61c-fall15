@@ -37,31 +37,80 @@ void assign_functionality(int argc, char *argv[], int *functionality)
     *functionality = 0;
 }
 
-void init(void)
+void check_init()
 {
-    char subdir[] = ".beargit";
-    char* err_msg = "Beargit already initialised";
     //Check not already initialised
     //Check that .beargit/ doesn't exist
     DIR *dir;
-    FILE *fp;
     struct dirent* d;
-    dir = opendir(".");
-    while((d = readdir(dir)))
+    char err_msg[] = "Beargit already initialised";
+    if((dir = opendir("./.beargit")))
     {
-        int cmp = strcmp(d->d_name, subdir);
-        if(!cmp)
-            error(1, 0, "%s", err_msg);
+        printf("%s\n", err_msg);
+        exit(1);
     }
-    closedir(dir);
+}
+
+void init(void)
+{
+    char subdir[] = ".beargit";
+    check_init();
+
+    //Create a list of file names
+    DIR* dir;
+    struct dirent* d;
+    if(!(dir = opendir(".")))
+    {
+        printf("Error opening dir\n");
+        exit(1);
+    }
+
+    //Error potential only tracks up to 100 files
+    char *file_names[100];
+
+    int count = 0;
+    while((d = readdir(dir)) != NULL)
+    {
+        if(d->d_name[0] == '.') continue;
+        if(d->d_type == 4) continue;
+        file_names[count] = (char*) malloc((strlen(d->d_name) + 1) * sizeof(char));
+        strcpy(file_names[count], d->d_name);
+        count++;
+    }
+
+
     mkdir(".beargit", 0777);
     chdir("./.beargit");
+    
+    FILE *fp;
     //.index contains a list of all currently tracked files, one per line, no diplicates
     //.prev contains the ID of the last commit, or 0.0 i there is no commit yet
     //Each .beargit/ID directory contains a copy of each tracked file (as well as the .index) at the time of the commit, a .msg file that contains the commit message(one line) and a .prev file that contains the commit _D of the previous commit.
-    fopen("test", "w");
-    fp = fopen(".index", "w");
-    fopen(".prev", "w");
+    if(!(fp = fopen(".index", "w")))
+    {
+        printf("Error creating .index\n");
+        exit(1);
+    }
+
+    for(int i = 0; i < count; i++)
+    {
+        fprintf(fp, "%s\n", file_names[i]);
+        i++;
+    }
+    fclose(fp);
+
+
+    if(!(fp = fopen(".prev", "w")))
+    {
+        printf("Error creating .prev\n");
+        exit(1);
+    }
+    fprintf(fp, "0..0");
+    fclose(fp);
+
+    printf("Beargit successfully initialised!\n");
+    
+
 }
 
 
