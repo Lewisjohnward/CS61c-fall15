@@ -7,77 +7,30 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-
-void print_argv(int argc, char *argv[])
-{
-    int i = 0;
-    do
-    {
-        printf("%s\n", argv[i]);
-        i++;
-    } while(i < argc);
-}
-
-void check_argc(int argc)
-{
-    if (argc != 2)
-    {
-        fprintf(stderr, "Incorrect number of args usage beargit <command>\n");
-        exit(1);
-    }
-}
-
-void assign_functionality(int argc, char *argv[], int *functionality)
-{
-    //0 init
-    //1 status
-    //2 rm
-    //3 commit
-    //4 log
-    *functionality = 0;
-}
-
-void check_init()
+int check_init()
 {
     //Check not already initialised
     //Check that .beargit/ doesn't exist
     DIR *dir;
     struct dirent* d;
-    char err_msg[] = "Beargit already initialised";
     if((dir = opendir("./.beargit")))
     {
-        printf("%s\n", err_msg);
-        exit(1);
-    }
+        return 1;
+    } else
+        return 0;
+
 }
 
 void init(void)
 {
     char subdir[] = ".beargit";
-    check_init();
+    char err_msg[] = "Beargit already initialised";
 
-    //Create a list of file names
-    DIR* dir;
-    struct dirent* d;
-    if(!(dir = opendir(".")))
+    if(check_init())
     {
-        printf("Error opening dir\n");
-        exit(1);
+        printf("%s\n", err_msg);
+        exit(0);
     }
-
-    //Error potential only tracks up to 100 files
-    char *file_names[100];
-
-    int count = 0;
-    while((d = readdir(dir)) != NULL)
-    {
-        if(d->d_name[0] == '.') continue;
-        if(d->d_type == 4) continue;
-        file_names[count] = (char*) malloc((strlen(d->d_name) + 1) * sizeof(char));
-        strcpy(file_names[count], d->d_name);
-        count++;
-    }
-
 
     mkdir(".beargit", 0777);
     chdir("./.beargit");
@@ -91,12 +44,6 @@ void init(void)
         printf("Error creating .index\n");
         exit(1);
     }
-
-    for(int i = 0; i < count; i++)
-    {
-        fprintf(fp, "%s\n", file_names[i]);
-        i++;
-    }
     fclose(fp);
 
 
@@ -105,25 +52,61 @@ void init(void)
         printf("Error creating .prev\n");
         exit(1);
     }
-    fprintf(fp, "0..0");
+    fprintf(fp, "0000000000000000000000000000000000000000");
     fclose(fp);
 
     printf("Beargit successfully initialised!\n");
-    
+    exit(0);
+}
+
+int beargit_init(void)
+{
+    init();
+}
+
+int beargit_add(const char* filename)
+{
+    FILE *fp;
+    //beargit add <filename>
+    //to start trackign a file
+    printf("BEARGIT ADD\n");
+    printf("To add: %s\n", filename);
+
+    //Check file exists
+    struct stat buffer;
+    if((stat(filename, &buffer)) == -1)
+    {
+        printf("Unable to locate %s\n", filename);
+        exit(1);
+    }
+
+
+
+    if((fp = fopen("./.beargit/.index", "r+")) == 0)
+    {
+        printf("Error opening index\n");
+        exit(1);
+    }
+    fprintf(fp, "%s\n", filename);
 
 }
 
-
-int main (int argc, char *argv[])
+int beargit_rm(const char* filename)
 {
-    int functionality;
-    //check_argc(argc);
-    //print_argv(argc, argv);
-    assign_functionality(argc, argv, &functionality);
-    switch(functionality)
-    {
-        case 0:
-            init();
-    }
-    return 0;
+    printf("placeholder\n");
+}
+
+int beargit_commit(const char* message)
+{
+    printf("placeholder\n");
+}
+
+int beargit_status()
+{
+    printf("placeholder\n");
+}
+
+int beargit_log()
+{
+    printf("placeholder\n");
 }
