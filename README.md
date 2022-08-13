@@ -5,12 +5,15 @@ Solutions to various problems from [CS61C](http://inst.eecs.berkeley.edu/~cs61c/
 
 ## Lectures
 - [x] Lecture 0: Intro, Number Representation
-- [x] Lecture 1: C Intro, Pointers
-- [x] Lecture 2: C Intro, Pointers
-- [x] Lecture 3: C Intro, Pointers
-- [x] Lecture 4: C Intro, Pointers
-- [x] Lecture 5: C Intro, Pointers
-- [] Lecture 6: MIPS, MIPS Functions
+- [x] Lecture 1: C Intro, Pointer
+- [x] Lecture 2: C Arrays, Strings, Pointer
+- [x] Lecture 3: C Memory Management, Usage
+- [x] Lecture 4: Intro to Assembly Language, MIPS intro
+- [x] Lecture 5: MIPS Instruction Formats
+- [ ] Lecture 6: Compiler, Assembler, Linker, Loader (CALL)
+- [ ] Lecture 7: Intro to Synchonous Digital Systems (SDS), Logic
+- [ ] Lecure 8: Functional Units, FSMs
+- [ ] Lecture 9: MIPS Datapath, Single-Cycle Control Intro
 
 
 - [x] Section 0: Number Representation
