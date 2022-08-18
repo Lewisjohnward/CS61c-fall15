@@ -10,10 +10,18 @@ Solutions to various problems from [CS61C](http://inst.eecs.berkeley.edu/~cs61c/
 - [x] Lecture 3: C Memory Management, Usage
 - [x] Lecture 4: Intro to Assembly Language, MIPS intro
 - [x] Lecture 5: MIPS Instruction Formats
-- [ ] Lecture 6: Compiler, Assembler, Linker, Loader (CALL)
-- [ ] Lecture 7: Intro to Synchonous Digital Systems (SDS), Logic
-- [ ] Lecure 8: Functional Units, FSMs
-- [ ] Lecture 9: MIPS Datapath, Single-Cycle Control Intro
+- [x] Lecture 6: Compiler, Assembler, Linker, Loader (CALL)
+- [x] Lecture 7: Intro to Synchonous Digital Systems (SDS), Logic
+- [x] Lecure 8: Functional Units, FSMs
+- [x] Lecture 9: MIPS Datapath, Single-Cycle Control Intro
+- [ ] Lecture 10: MIPS Single-Cycle Control, Pipelining Intro
+- [ ] Lecture 11: MIPS Pipelining Hazards
+- [ ] Lecture 12: Memory Hierarchy, Fully Associative Caches
+- [ ] Lecture 13: Caches: Direct-mapped, Set-associative, Performance
+- [ ] Lecture 14: Multileel Caches, Cache Questions
+- [ ] Lecture 15: Performan,ce Floating Point, Tech Trends
+- [ ] Lecture 16: Flynn Taxonomy, Data-Level Parallelism
+- [ ] Lecture 17: Amdahl's Law, Thread-Level Parallelism, OpenMP Intro
 
 
 - [x] Section 0: Number Representation
@@ -24,7 +32,7 @@ Solutions to various problems from [CS61C](http://inst.eecs.berkeley.edu/~cs61c/
 
 - [x] HW 0: Intro and Number Representation
 
-- [ ] Section 2: C Memory Management and MIPS Intro
+- [x] Section 2: C Memory Management and MIPS Intro
 - [ ] Lab 2: Advanced C, Memory Management
 
 - [ ] HW 1: C (Build git Part I)
