@@ -32,7 +32,7 @@ Solutions to various problems from [CS61C](http://inst.eecs.berkeley.edu/~cs61c/
 - [ ] Lab 4: MIPS Functions, Pointers
 
 
-## Homeworks
+### Homeworks
 - [x] HW 0: Intro and Number Representation
 - [ ] HW 1: C (Build git Part I)
 - [ ] HW 2: Advanced C (Build git Part II)
