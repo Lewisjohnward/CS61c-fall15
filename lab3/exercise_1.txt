@@ -1,0 +1,36 @@
+1. What do the .data, .word, .text directives mean?
+
+----
+
+Directives are used to tell the assembler how to function
+
+.text: Anything that follows is placed in the text segment i.e. where executable code exists
+
+.data: Anything that follows is placed in the data segment (i.e. Where static data stored in memory exists)
+
+.global: The specified label is made visible to other files (Each executable unit must have the label main declared and made externally-visible)
+
+.word: The value of each operand is stored in a 32-bit word in memory & the words are aligned on word boundaries
+
+.half: The value of each operand is stored in a 16-bit halfword in memory, they are aligned on halfword boundaries
+
+2. How do you set a breakpoint in MARS
+
+----
+
+Click bkpt under text segment to break when that instruction is to be executed
+
+3. Once at a breakpoint, how do you continue to execute your code?
+
+----
+
+Continue stepping through code by pressing F7 otherwise continue to next breakpoint/finish program using F5
+
+
+4. What number did the program output?
+
+---- 
+
+The number output 34 this is Fibonacci number 9
+
+5. At what address is n stored in memory?
